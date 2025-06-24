@@ -21,3 +21,16 @@ Este projeto calcula o gasto total de combustível em uma viagem com base na dis
 - CSS
 
 
+# Como rodar:
+
+É necessário ter instalado o Flask e a API Open Route Service, além de criar um ambiente virtual: 
+
+- pip install flask
+- pip install openrouteservice
+- python app.py
+
+Após isso é só entrar no link:
+
+http://127.0.0.1:5000/
+
+
