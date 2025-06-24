@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Leandro Klink Freires" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Combustível</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div>
+        <h1>Simulador de Combustível</h1>
+        <form action="/calcular" method="POST">
+            <h3>Opções de cálculo da distância:</h3>
+
+            <label>Distância manual  em KM (opcional):</label>
+                <input type="number" step="0.01" name="distancia_manual" placeholder="Se souber, insira aqui">
+
+                <p>Ou preencha os campos abaixo para calcular pela rota:</p>
+
+                <label>Origem (latitude, longitude):</label>
+                <input type="text" name="origem" placeholder="-23.55052, -46.633308">
+
+                <label>Destino (latitude, longitude):</label>
+                <input type="text" name="destino" placeholder="-22.911014, -43.209373">
+
+                <hr>
+
+                <label>Consumo do veículo em km/l:</label>
+                <input type="number" step="0.01" name="consumo" required>
+
+                <label>Preço do combustível em R$:</label>
+                <input type="number" step="0.01" name="preco" required>
+                
+                <button type="submit">Calcular</button>
+        </form>
+    </div>
+</body>
+</html>
